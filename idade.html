@@ -1,0 +1,57 @@
+<meta charset = "UTF-8">
+
+<script>
+	
+
+	function escreva(frase) {
+
+		document.write(frase+' ');
+
+	}
+
+  	var totalPessoas = parseInt(prompt("Quantidade de pessoas?"));
+
+  	var listaDePessoas = [];
+
+  	var numero = 1; 
+  	
+  	var listaDePessoaMaior = [];
+
+  	var listaMenoresIdade = [];
+
+
+  	while(numero <= totalPessoas) {
+
+  		var idade = parseInt(prompt("Informe idade da pessoa "));
+  		
+  		listaDePessoas.push(idade)
+  		numero++;
+  	}
+
+  	for(i=0;i<totalPessoas;i++){
+
+		if(listaDePessoas[i] < 18){
+
+			listaMenoresIdade.push(listaDePessoas[i]);
+
+		}
+  		
+  	}
+
+  	for(i=0;i<totalPessoas;i++){
+
+		if(listaDePessoas[i] >= 18){
+
+			listaDePessoaMaior.push(listaDePessoas[i]);
+
+		}
+  		
+  	}
+
+  	escreva('lista de idades das pessoas que são menores de idade: ' + listaMenoresIdade + "<br>");
+  	escreva('lista de idades das pessoas que são maiores de idade: ' + listaDePessoaMaior + "<br>");
+
+  	escreva("FIM");
+
+
+</script>	
